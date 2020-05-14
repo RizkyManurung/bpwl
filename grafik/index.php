@@ -7,8 +7,8 @@ if ($conn->connect_errno) {
 $rows = array();
 $table = array();
 $table['cols'] = array(
-	array('label' => 'Cabang Olahraga', 'type' => 'string'),
-	array('label' => 'Jumlah Atlet', 'type' => 'number')
+	array('label' => 'Cabang Olahraga yang diikuti', 'type' => 'string'),
+	array('label' => 'Jumlah Atlet dari cabang olahraga', 'type' => 'number')
 );
  
 $sql = $conn->query("SELECT * FROM users");
