@@ -7,8 +7,8 @@ if ($conn->connect_errno) {
 $rows = array();
 $table = array();
 $table['cols'] = array(
-	array('label' => 'Cabang Olahraga yang diikuti', 'type' => 'string'),
-	array('label' => 'Jumlah Atlet dari cabang olahraga', 'type' => 'number')
+	array('label' => 'Cabang Olahraga', 'type' => 'string'),
+	array('label' => 'Jumlah Atlet', 'type' => 'number')
 );
  
 $sql = $conn->query("SELECT * FROM users");
@@ -35,7 +35,7 @@ $jsonTable = json_encode($table);
 	function drawChart() {
 		var data = new google.visualization.DataTable(<?php echo $jsonTable; ?>);
  
-		var options = {'title':'Data Atlet',
+		var options = {'title':'Data Atlet di Pekanbaru',
 					   'width':800,
 					   'height':700};
  
